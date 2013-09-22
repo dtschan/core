@@ -108,7 +108,9 @@ public class ValidateHandler extends BaseHandler {
     private ValidationResult applyValidator(Exchange exchange, Validator validator) {
         Message message = exchange.getMessage();
         ValidationResult validationResult = null;
-        if (Message.class.isAssignableFrom(validator.getType())) {
+        if (Exchange.class.isAssignableFrom(validator.getType())) {
+            validationResult = validator.validate(exchange);
+        } else if (Message.class.isAssignableFrom(validator.getType())) {
             validationResult = validator.validate(message);
         } else {
             validationResult = validator.validate(message.getContent(validator.getType()));
