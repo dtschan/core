@@ -41,6 +41,12 @@
         </dependency>
         <dependency>
             <groupId>org.switchyard</groupId>
+            <artifactId>switchyard-api</artifactId>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.switchyard</groupId>
             <artifactId>switchyard-extensions-java</artifactId>
         </dependency>
         <!-- TODO: Maybe scope this as "provided" ? -->
@@ -100,10 +106,5 @@
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-core-asl</artifactId>
         </dependency>
-<!--         <dependency> -->
-<!--             <groupId>org.hamcrest</groupId> -->
-<!--             <artifactId>hamcrest-all</artifactId> -->
-<!--             <scope>test</scope> -->
-<!--         </dependency> -->
     </dependencies>
 </project>

@@ -103,6 +103,11 @@ public class MockExchange implements Exchange {
         return this;
     }
 
+    public MockExchange setProvider(Service provider) {
+        _provider = provider;
+        return this;
+    }
+
     @Override
     public ServiceReference getConsumer() {
         return _consumer;
